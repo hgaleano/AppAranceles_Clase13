@@ -1,0 +1,7 @@
+{
+  "name": "appAranceles",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
