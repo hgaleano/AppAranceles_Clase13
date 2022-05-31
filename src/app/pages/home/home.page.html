@@ -1,0 +1,17 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Busqueda de Aranceles
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-item>
+  <ion-label position="floating">Descripción</ion-label>
+  <ion-input type="text" [(ngModel)]="texto_busqueda"></ion-input>
+</ion-item>
+  <ion-button (click)="Buscar()" expand="block" shape="round">
+  Buscar
+  </ion-button>
+</ion-content>
