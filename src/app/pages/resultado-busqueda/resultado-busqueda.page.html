@@ -1,0 +1,13 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Resultado de busqueda</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+<ion-item *ngFor="let item of resultado" detail (click)="mostrarDetalle(item)">
+  <ion-label class="ion-text-wrap">{{item.descripcion}}</ion-label>
+</ion-item>
+
+</ion-content>

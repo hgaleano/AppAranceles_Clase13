@@ -11,7 +11,30 @@
   <ion-label position="floating">Descripción</ion-label>
   <ion-input type="text" [(ngModel)]="texto_busqueda"></ion-input>
 </ion-item>
-  <ion-button (click)="Buscar()" expand="block" shape="round">
+  <ion-button (click)="BuscarV2(true)" expand="block" shape="round">
   Buscar
+  </ion-button>
+
+<ion-item *ngFor="let item of resultado; index as i" detail (click)="mostrarDetalle(item)">
+  <ion-label class="ion-text-wrap">
+    <ion-text color="primary">
+      <h3>{{item.codigo}}</h3>
+    </ion-text>
+    <ion-text color="secondary">
+      <p>{{item.descripcion}}</p>
+    </ion-text>
+  </ion-label>
+  
+</ion-item>
+
+  <ion-infinite-scroll threshold="100px" (ionInfinite)="BuscarV2(false)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading more data...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+  <ion-button *ngIf="mostrar_boton" color="medium" (click)="BuscarV2(false)" expand="block"  fill="outline" shape="round">
+   Cargar mas
   </ion-button>
 </ion-content>
