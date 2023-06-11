@@ -10,7 +10,7 @@ import { AlertController,LoadingController  } from '@ionic/angular';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
-user={email:null,password:null}; 
+user={email:'admin@gmail.com',password:'uaa-123'}; 
 datos_usuario:LoginResponse;
   constructor(
     private serviceArancel:ArancelesService,

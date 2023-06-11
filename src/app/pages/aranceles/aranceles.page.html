@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Aranceles</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div *ngIf="aranceles.length>0">
+  <ion-item *ngFor="let item of aranceles">
+    <ion-label class="ion-text-wrap">{{item.arancel}}</ion-label>
+
+    <ion-label color="primary" slot="end">{{item.monto}}</ion-label>
+  </ion-item>
+</div>
+
+<div *ngIf="aranceles.length==0">
+  <ion-item>
+    <ion-label class="ion-text-wrap">  <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></ion-label>
+
+    <ion-label color="primary">  <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+  </ion-item>
+</div>
+
+<div *ngIf="aranceles.length==0">
+  <ion-item>
+    <ion-label class="ion-text-wrap">  <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></ion-label>
+
+    <ion-label color="primary">  <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+  </ion-item>
+</div>
+<div *ngIf="aranceles.length==0">
+  <ion-item>
+    <ion-label class="ion-text-wrap">  <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text></ion-label>
+
+    <ion-label color="primary">  <ion-skeleton-text animated style="width: 30%"></ion-skeleton-text></ion-label>
+  </ion-item>
+</div>
+  
+</ion-content>
